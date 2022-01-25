@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.input-bg{
+    background-image: url(img/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.boost-bg{
+    background-image: url(img/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+@media (min-width : 1024px) {
+    .input-bg{
+        background-image: url(img/bg-shorten-desktop.svg);
+        background-size: cover;
+    }
+    .boost-bg{
+        background-image: url(img/bg-boost-desktop.svg);
+        background-size: cover;
+    }
+    .desktop-position{
+        background-position: right -6vw bottom 0;
+    }
+    
+}
+
+@layer components {
+
+    .btn-primary{
+        @apply bg-cyan; 
+        @apply text-white; 
+        @apply font-bold;
+        @apply lg:hover:brightness-110;
+        @apply cursor-pointer;
+    }
+
+    .nav-link{
+        @apply block; 
+        @apply mt-4; 
+        @apply lg:inline-block; 
+        @apply lg:mt-0; 
+        @apply lg:hover:text-veryDarkViolet;
+    }
+
+    .icon{
+        @apply h-[90px]; 
+        @apply w-[90px]; 
+        @apply bg-darkViolet; 
+        @apply rounded-full; 
+        @apply absolute;  
+        @apply bg-no-repeat; 
+        @apply bg-center;
+    }
+
+    .alerta_input{
+        @apply border-2;
+        @apply border-red;
+        @apply placeholder-red;
+        @apply placeholder-opacity-60;
+    }
+
+    .alerta{
+        @apply text-red; 
+        @apply text-sm; 
+        @apply mt-2;
+    }
+
+    footer a {
+        @apply lg:hover:text-cyan;
+    }
+
+
+    @media (max-width : 1024px) {
+        .navigation{
+            @apply mt-5;
+            @apply px-5;
+            @apply bg-darkViolet;
+            @apply text-white;
+            @apply rounded-lg;
+            @apply text-center;
+
+        }
+        .botones{
+            @apply flex;
+            @apply flex-col;
+            @apply my-10;
+            @apply border-t;
+        }
+    }
+}
+
+
+
